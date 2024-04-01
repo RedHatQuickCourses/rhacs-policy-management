@@ -1,6 +1,42 @@
-= An Example Quick Course
+= Red Hat Advanced Cluster Security for Kubernetes: Policy Management
 :navtitle: Home
 
-== Introduction
+Welcome to this quick course on the _Red Hat Advanced Cluster Security for Kubernetes: Policy Management_.
+This quick course is a part of a series of courses about Red Hat Advanced Cluster Security (RHACS) for Kubernetes.
 
-This is an example quick course demonstrating the usage of Antora for authoring and publishing quick courses.
+IMPORTANT: The hands-on labs in this course were created and tested with RHACS v4.4. Labs should mostly work without any changes in minor dot release upgrades of the product. Please open issues in this repository if you face any issue.
+
+== Authors
+
+The PTL team acknowledges the valuable contributions of the following Red Hat associates:
+
+* Chris Porter
+* Eric Bannon
+* Ted Singdahlsen
+* Sarvesh Pandit
+
+== Classroom Environment
+
+This course has a few, simple hands-on labs. You will use the https://demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.elt-ocp4-hands-on-acs.prod&utm_source=webapp&utm_medium=share-link[Hands On with Red Hat Advanced Cluster Security for Kubernetes] catalog item in the Red Hat Demo Platform (RHDP) to run the hands-on exercises in this course.
+
+For Red Hat partners who do not have access to RHDP, ##FIX_THIS##
+
+== Prerequisites
+
+For this course, you should have:
+
+* Basic experience with Red{nbsp}Hat OpenShift is recommended but it is not mandatory.
+* Experience on installing operators on Red Hat OpenShift.
+* Familiarity with the concepts of Kubernetes and containers (namespaces, container images, registries, etc.)
+
+== Objectives
+
+The overall objectives of this course include:
+
+* Familiarize yourself the policy engine
+* Use the default policies
+* Build and create a custom policy
+* Learn to see and address policy violations
+* Use `roxctl` command-line interface to run image and deployment checks
+
+
