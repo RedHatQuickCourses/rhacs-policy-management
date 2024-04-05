@@ -33,6 +33,10 @@ The basis of policies are its associated criteria. Based on the criteria outline
 
 === Examine Specific Policy
 
+* Login to RHACS console with admin credentials. You might get warning message and you need to click on _visit this website_.
++
+image::connection_request.png[width=80%,align="center"]
+
 * From the left navigation menu, select the _Platform Configuration_ tab then select _Policy Management_ and then _Policies_.
 
 ##FIX this image##

@@ -1,4 +1,4 @@
-= Red{nbsp}Hat Advanced Cluster Security Policy Overview
+= Policy Overview
 
 This chapter covers the Red{nbsp}Hat Advanced Cluster Security (RHACS) Policy Overview.
 You learn what is policy engine and existing policies.

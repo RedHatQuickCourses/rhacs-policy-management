@@ -1,3 +1,2 @@
-= Chapter 2
+= Creating Custom Policies
 
-This is the home page of _Chapter 2_ in the *hello* quick course....
