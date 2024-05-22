@@ -10,7 +10,7 @@ The heart of Red Hat Advanced Cluster Security for Kubernetes (RHACS) is the pol
 
 * Policy criteria can cross the build, deploy, and runtime lifecycle.
 * For example, policies that highlight vulnerabilities in deployments with privileged containers in that deployment.
-* Another example might runtime criteria - like execution of shell commands - in containers in deployments that have external network exposure.
+* Another example might be runtime criteria - like execution of shell commands - in containers in deployments that have external network exposure.
 * Its easy to write a policy that prevents use of compilers and other build tools - except in development clusters, in namespaces for CI/CD tools.
 * There are no “silos” - other tools require you to manage policies for vulnerabilities and runtime separately.
 * The unified policy engine allows for targeted conditions and targeted enforcement, easily allowing exceptions for specific applications once approved by security.
