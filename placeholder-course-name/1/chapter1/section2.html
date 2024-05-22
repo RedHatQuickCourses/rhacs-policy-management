@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Section 2 :: Placeholder Course Title</title>
+    <title>Lab - Build Example (Fixable Severity At least Important) :: Placeholder Course Title</title>
     <link rel="prev" href="section1.html">
     <link rel="next" href="section3.html">
     <meta name="generator" content="Antora 3.1.3">
@@ -48,16 +48,22 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Chapter 1</a>
+    <a class="nav-link" href="index.html">Policy Overview</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">Section 1</a>
+    <a class="nav-link" href="section1.html">Introduction to Policies</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section2.html">Section 2</a>
+    <a class="nav-link" href="section2.html">Lab - Build Example (Fixable Severity At least Important)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section3.html">Section 3</a>
+    <a class="nav-link" href="section3.html">Lab - Deploy Example (Log4Shell)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">Lab - Runtime Example (Exec and Package MGR execution)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section5.html">Conclusion</a>
   </li>
 </ul>
   </li>
@@ -67,10 +73,16 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter2/index.html">Chapter 2</a>
+    <a class="nav-link" href="../chapter2/index.html">Creating Custom Policies</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">Introduction to Custom Policies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">Lab - Create a Custom Policy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section3.html">Conclusion</a>
   </li>
 </ul>
   </li>
@@ -80,13 +92,16 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter3/index.html">Chapter 3</a>
+    <a class="nav-link" href="../chapter3/index.html">Addressing Policy Violations</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter3/section1.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section2.html">Section 2</a>
+    <a class="nav-link" href="../chapter3/section2.html">Lab - Runtime Policy Violation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section3.html">Conclusion</a>
   </li>
 </ul>
   </li>
@@ -128,8 +143,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Placeholder Course Title</a></li>
-    <li><a href="index.html">Chapter 1</a></li>
-    <li><a href="section2.html">Section 2</a></li>
+    <li><a href="index.html">Policy Overview</a></li>
+    <li><a href="section2.html">Lab - Build Example (Fixable Severity At least Important)</a></li>
   </ul>
 </nav>
 </div>
@@ -138,13 +153,60 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Section 2</h1>
+<h1 class="page">Lab - Build Example (Fixable Severity At least Important)</h1>
 <div class="paragraph">
-<p>This is <em>Section 2</em> of <em>Chapter 1</em> in the <strong>hello</strong> quick course&#8230;&#8203;.</p>
+<p><mark>FIX_MISSING_IMAGES</mark></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to Platform Configuration &#8594; Policy Management</p>
+</li>
+<li>
+<p>Find "Fixable Severity at Least Important" in the list</p>
+</li>
+<li>
+<p>Actions &#8594; "Edit Policy"</p>
+</li>
+<li>
+<p>Review and verify Name, Categories, Description, Rationale, Guidance. Click Next.</p>
+</li>
+<li>
+<p>Review and verify Lifecycle Stages, Response Method, Enforcement Behavior. Ensure that build enforcement is enabled.</p>
+</li>
+<li>
+<p>Click Next to review and describe Policy Criteria. No changes.</p>
+</li>
+<li>
+<p>Click Next to review and describe Policy Scope. No changes.</p>
+</li>
+<li>
+<p>Click Next to final review and Preview. Click Save.</p>
+</li>
+<li>
+<p>Use ACS command-line tool, roxctl:</p>
+<div class="listingblock">
+<div class="content">
+<pre>roxctl image check -e $CENTRAL:443 --image quay.io/rhacs-misc/log4shell:1.1</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Review policy output warnings and errors</p>
+</li>
+<li>
+<p>Verify build failure via roxctl return code:</p>
+<div class="listingblock">
+<div class="content">
+<pre>echo $?</pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="section1.html">Section 1</a></span>
-  <span class="next"><a href="section3.html">Section 3</a></span>
+  <span class="prev"><a href="section1.html">Introduction to Policies</a></span>
+  <span class="next"><a href="section3.html">Lab - Deploy Example (Log4Shell)</a></span>
 </nav>
 </article>
   </div>
