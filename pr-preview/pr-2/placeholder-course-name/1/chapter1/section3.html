@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lab - Deploy Example (Log4Shell) :: Placeholder Course Title</title>
+    <link rel="prev" href="section2.html">
+    <link rel="next" href="section4.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Placeholder Course Title</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/rhacs-policy-management /issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="placeholder-course-name" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Placeholder Course Title</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Policy Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section1.html">Introduction to Policies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section2.html">Lab - Build Example (Fixable Severity At least Important)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section3.html">Lab - Deploy Example (Log4Shell)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">Lab - Runtime Example (Exec and Package MGR execution)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section5.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter2/index.html">Creating Custom Policies</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section1.html">Introduction to Custom Policies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">Lab - Create a Custom Policy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section3.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter3/index.html">Addressing Policy Violations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section1.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section2.html">Lab - Runtime Policy Violation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section3.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix A</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Placeholder Course Title</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Placeholder Course Title</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Placeholder Course Title</a></li>
+    <li><a href="index.html">Policy Overview</a></li>
+    <li><a href="section3.html">Lab - Deploy Example (Log4Shell)</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Lab - Deploy Example (Log4Shell)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>FIX_MISSING_IMAGES</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_goals"><a class="anchor" href="#_goals"></a>Goals</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Prevent the execution of vulnerable deployments</p>
+</li>
+<li>
+<p>Report and resolve the violation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_access_the_student_vm_via_ssh"><a class="anchor" href="#_access_the_student_vm_via_ssh"></a>Access the Student VM via SSH</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The student VM host serves as an important access point into the environment, so you must ensure you can connect to it.</p>
+</div>
+<div class="paragraph">
+<p><strong>Requirements</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The ssh address for the bastion host:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>For example, '<a href="mailto:lab-user@bastion.4klh8.sandbox1150.opentlc.com">lab-user@bastion.4klh8.sandbox1150.opentlc.com</a>'</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>The username and password for the Linux student VM (lab-user)</strong></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This information will be available in the services tab at <a href="https://demo.redhat.com/" target="_blank" rel="noopener">demo.redhat.com</a>. Or in the lab provisioning email.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="images/11_log4shell_01.png" alt="11 log4shell 01">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure"><a class="anchor" href="#_procedure"></a>Procedure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Connect to your student VM host using the command and password you received in the provisioning email:</p>
+<div class="listingblock">
+<div class="content">
+<pre>ssh lab-user@bastion.&lt;$GUID&gt;.&lt;$BASEDOMAIN&gt;
+The authenticity of host' bastion.4klh8.sandbox1150.opentlc.com (3.134.153.6)' cant be established.
+ED25519 key fingerprint is SHA256:g0H5C1vP1xNqhL7fp0HxMRDPgjgzuAdi3ZIyKQl1mPU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the GUID variable is set correctly for your environment:</p>
+<div class="listingblock">
+<div class="content">
+<pre>echo $GUID
+c3po</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Your GUID may be a 4- or 5-character alphanumeric string.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_test_log4shell_policy"><a class="anchor" href="#_test_log4shell_policy"></a>Test Log4Shell Policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this lab, you demonstrate how to quickly stop workloads with <code>log4shell</code> vulnerabilities from deploying using Red Hat Advanced Cluster Security for Kubernetes (RHACS). You also learn how to locate workloads with <code>log4shell</code>.</p>
+</div>
+<div class="paragraph">
+<p>The Log4Shell policy is a build- and deployment-time policy.
+It analyses the image file for vulnerable Java&#8482; Log4J versions.</p>
+</div>
+<div class="sect2">
+<h3 id="_deploy_vulnerable_image"><a class="anchor" href="#_deploy_vulnerable_image"></a>Deploy Vulnerable Image</h3>
+<div class="paragraph">
+<p>ADD COMMENTARY</p>
+</div>
+<div class="sect3">
+<h4 id="_procedure_2"><a class="anchor" href="#_procedure_2"></a>Procedure</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Let&#8217;s start by creating a new project and deploying a vulnerable Log4Shell application.</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc new-project log4shell
+
+Now using project "log4shell" on server "https://api.cluster-fdg9s.fdg9s.sandbox674.opentlc.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/serve_hostname</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Deploy the vulnerable application.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a Deployment manifest file:</p>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;&lt; EOF &gt;deploy.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log4shell
+  namespace: log4shell
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: log4shell
+  template:
+    metadata:
+      labels:
+        deployment: log4shell
+    spec:
+      containers:
+      - image: quay.io/gpte-devops-automation/log4shell-vuln-app:v0.1.1
+        imagePullPolicy: IfNotPresent
+        name: log4shell
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      restartPolicy: Always
+EOF</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the Deployment based on the manifest file:</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc create -f ./deploy.yaml</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Notice the application was deployed without issues.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_check_for_vulnerability_in_acs_dashboard"><a class="anchor" href="#_check_for_vulnerability_in_acs_dashboard"></a>Check for vulnerability in ACS dashboard.</h3>
+<div class="paragraph">
+<p>It is now possible to see the Log4Shell vulnerability in the ACS dashboard.</p>
+</div>
+<div class="sect3">
+<h4 id="_procedure_3"><a class="anchor" href="#_procedure_3"></a>Procedure</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the ACS dashboard, navigate to <strong>Violations</strong></p>
+</li>
+</ol>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="images/11_log4shell_02.png" alt="11 log4shell 02">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice <code>Log4Shell: log4j Remote Code Execution vulnerability</code> is now visible in the violations list.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click on the <code>Log4Shell: log4j Remote Code Execution vulnerability</code> to get more information on the violation.</p>
+</li>
+<li>
+<p>Click on the <strong>Deployment</strong> tab to view information about the vulnerable deployment.</p>
+</li>
+<li>
+<p>Click on the <strong>Policy</strong> tab to view the current policy.</p>
+</li>
+<li>
+<p>Delete the log4shell deployment:</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc delete -f ./deploy.yaml</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_set_deploy_time_enforcement_to_on"><a class="anchor" href="#_set_deploy_time_enforcement_to_on"></a>Set Deploy Time Enforcement to On</h3>
+<div class="paragraph">
+<p>You must enable deploy-time enforcement for the <code>Log4Shell: log4j Remote Code Execution vulnerability</code> policy.</p>
+</div>
+<div class="sect3">
+<h4 id="_procedure_4"><a class="anchor" href="#_procedure_4"></a>Procedure</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Platform Configuration &#8594; Policy Management</strong> and find the policy called <code>Log4Shell: log4j Remote Code Execution vulnerability</code>.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To find the policy quickly, type <code>Policy</code> followed by <code>Log4Shell</code> into the filter bar on the <strong>Policy Management</strong> page.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the policy by clicking the three dots to the right and select <code>Edit policy</code>.</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="images/11_log4shell_05.png" alt="11 log4shell 05">
+</div>
+</div>
+</li>
+<li>
+<p>Use the <code>Policy Behavior</code> tab and enable runtime enforcement by clicking the <code>inform and enforce button</code> under <code>Response Method</code></p>
+</li>
+<li>
+<p>Scroll down to <code>Configure enforcement behavior</code> and switch both the <code>Enforce on Build</code> and <code>DEnforce on Deploy</code> selectors to on.</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="images/11_log4shell_06.png" alt="11 log4shell 06">
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Review Policy</strong> on the left and <strong>Save</strong>.</p>
+</li>
+<li>
+<p>Redeploy the vulnerable image</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc create -f ./deploy.yaml</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Examine the output and note that the Deployment failed to start:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Error from server (Failed currently enforced policies from StackRox): error when creating "./deploy.yaml": admission webhook "policyeval.stackrox.io" denied the request:
+The attempted operation violated 1 enforced policy, described below:
+
+Policy: Log4Shell: log4j Remote Code Execution vulnerability
+- Description:
+    ↳ Alert on deployments with images containing the Log4Shell vulnerabilities
+      (CVE-2021-44228 and CVE-2021-45046). There are flaws in the Java logging library
+      Apache Log4j in versions from 2.0-beta9 to 2.15.0, excluding 2.12.2.
+- Rationale:
+    ↳ These vulnerabilities allows a remote attacker to execute code on the server if
+      the system logs an attacker-controlled string value with the attacker's JNDI
+      LDAP server lookup.
+- Remediation:
+    ↳ Update the log4j libary to version 2.16.0 (for Java 8 or later), 2.12.2 (for
+      Java 7) or later. If not possible to upgrade, then remove the JndiLookup class
+      from the classpath: zip -q -d log4j-core-*.jar
+      org/apache/logging/log4j/core/lookup/JndiLookup.class
+- Violations:
+    - CVE-2021-44228 (CVSS 10) (severity Critical) found in component 'log4j' (version 2.14.1) in container 'log4shell'
+    - CVE-2021-45046 (CVSS 9) (severity Critical) found in component 'log4j' (version 2.14.1) in container 'log4shell'
+
+
+In case of emergency, add the annotation {"admission.stackrox.io/break-glass": "ticket-1234"} to your deployment with an updated ticket number</pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You might get a different message, detailed below.
+RHACS has not yet scanned the image, and is blocking unscanned images from deployment.
+If that is the case, simpley run the <code>oc create -f ./deploy.yaml</code> again and it will have scanned the image.
+Now the deployment will trigger the log4j violations above.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Error from server (Failed currently enforced policies from StackRox): error when creating "./deploy.yaml": admission webhook "policyeval.stackrox.io" denied the request:
+The attempted operation violated 1 enforced policy, described below:
+
+Policy: Images with no scans
+- Description:
+    ↳ Alert on deployments with images that have not been scanned
+- Rationale:
+    ↳ Without a scan, there will be no vulnerability information for this image
+- Remediation:
+    ↳ Configure the appropriate registry and scanner integrations so that StackRox can
+      obtain scans for your images.
+- Violations:
+    - Image in container 'log4shell' has not been scanned
+
+
+In case of emergency, add the annotation {"admission.stackrox.io/break-glass": "ticket-1234"} to your deployment with an updated ticket number</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_view_violations_report"><a class="anchor" href="#_view_violations_report"></a>View Violations Report</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A complete record of the event can be found on the <strong>Violations</strong> page.</p>
+</div>
+<div class="sect2">
+<h3 id="_procedure_5"><a class="anchor" href="#_procedure_5"></a>Procedure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <strong>Violation</strong> page from the left navigation bar.</p>
+</li>
+<li>
+<p>Use the Filter Bar to find the <code>Policy: Log4Shell: log4j Remote Code Execution vulnerability</code> and select the policy name.</p>
+</li>
+<li>
+<p>Explore the list of the violation events.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You enabled Log4Shell deploy-time policy enforcement, and verified that the policy prevented the <code>log4shell</code> container from running.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="section2.html">Lab - Build Example (Fixable Severity At least Important)</a></span>
+  <span class="next"><a href="section4.html">Lab - Runtime Example (Exec and Package MGR execution)</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
