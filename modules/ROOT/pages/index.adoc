@@ -12,8 +12,9 @@ The PTL team acknowledges the valuable contributions of the following Red Hat as
 
 * Chris Porter
 * Eric Bannon
-* Ted Singdahlsen
+* Michael Foster
 * Sarvesh Pandit
+* Ted Singdahlsen
 
 == Classroom Environment
 

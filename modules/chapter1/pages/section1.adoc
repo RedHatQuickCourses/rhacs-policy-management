@@ -1,3 +1,80 @@
-= Section 1
+= Introduction to Policies
 
-This is _Section 1_ of _Chapter 1_ in the *hello* quick course....
+Red Hat Advanced Cluster Security for Kubernetes (RHACS) allows you to use out-of-the-box security policies and define custom multi-factor policies for your container environment.
+
+Configuring these policies enables you to automatically prevent high-risk service deployments in your environment and respond to runtime security incidents.
+
+The heart of Red Hat Advanced Cluster Security for Kubernetes (RHACS) is the policy engine.
+
+== Power of Single Policy Engine
+
+* Policy criteria can cross the build, deploy, and runtime lifecycle.
+* For example, policies that highlight vulnerabilities in deployments with privileged containers in that deployment.
+* Another example might runtime criteria - like execution of shell commands - in containers in deployments that have external network exposure.
+* Its easy to write a policy that prevents use of compilers and other build tools - except in development clusters, in namespaces for CI/CD tools.
+* There are no “silos” - other tools require you to manage policies for vulnerabilities and runtime separately.
+* The unified policy engine allows for targeted conditions and targeted enforcement, easily allowing exceptions for specific applications once approved by security.
+
+== Overview of Built-in Policies
+
+All of the policies that ship with the product are designed with the goal of providing targeted remediation that improves security hardening.
+
+You will see this list contains many _Build_ and _Deploy_ time policies to catch misconfigurations early in the pipeline, but also _Runtime_ policies that point back to specific hardening recommendations.
+
+These policies come from Red Hat - as per their expertise, interpretation of industry best practice, and interpretation of common compliance standards, but you can modify them or create your own.
+
+== Default security policies
+
+The default security policies in RHACS provide broad coverage to identify security issues and ensure best practices for security in your environment.
+
+These policies are enabled by default in inform mode and are designed to notify security SREs and developers of security risk across every aspect of the containers lifecycle.
+
+The basis of policies are its associated criteria. Based on the criteria outlined in each policy, RHACS will either show a violation, or compliance, with the policy.
+
+=== Examine Specific Policy
+
+* Login to RHACS console with admin credentials. You might get warning message and you need to click on _visit this website_.
++
+image::connection_request.png[width=80%,align="center"]
+
+* From the left navigation menu, select the _Platform Configuration_ tab then select _Policy Management_ and then _Policies_.
+
+##FIX this image##
+
+*  Select the `Alpine Linux Package Manager (apk)` in Image policy.
+
+* Examine the policy details.
+
+##FIX this image##
+
+This is what an RHACS policy looks like. The descriptive details under _Policy Details_, _Rationale_, and _Remediation_ provide the DevOps team with context about why this issue is important for security and, more importantly, what to do about it. This policy violation notes that including package managers in containers is a security risk. While useful in a container context, they represent a tool that an attacker can use to install software and normally do not provide a legitimate use. A best practice is to have containers ship with their required dependencies already installed.
+
+=== Enable Specific Policy Enforcement
+
+RHACS focuses on empowering and encouraging developers to understand and resolve security issues in their own deployments. Sometimes you have to balance the carrot with a stick, because security officers need to know that dangerous misconfigurations are not to be promoted and deployed in certain environments. That is where policy enforcement comes in.
+
+In the example below we will copy the `Iptables` policy and turn it into a `Bash` policy to inform us when developers might be testing their containers.
+
+* From the list, select the Severity `CRITICAL_SEVERITY` policy.
+
+* Locate the option for `Iptables Executed in Privileged Container`.
+
+* Click the 3 dots on the right of the page and select the option to clone the policy. The goal is to have a policy that looks like the following. Feel free to play around as you do not need to be exact in these steps.
+
+##FIX this image##
+
+* Click btn:[Next] (right arrow) to see *Policy Criteria*.
+
+* Click btn:[Next] to see *Violations Preview*.
+
+* Click btn:[Next] to see *Enforcement*.
+
+* Make sure the *ON* switch is clicked for runtime enforcement.
+
+* Click btn:[Save] (the floppy disk icon).
+
+* Review the policy.
+
+##FIX this image##
+
+Enforcement is another demonstration of Kubernetes-native security, leveraging the pipeline process to prevent unacceptable risks. In the absence of CI/CD integration, or for images that are promoted without going through CI/CD, you leverage the built-in power of a Kubernetes Admission Controller to decide if a deployment can be created. You are essentially programming OpenShift to reduce security risks. The security team gets their enforcement, and DevOps sees a normal failure from the OpenShift API, with clear remediation/guidance steps instead of a nebulous error that forces them to open a ticket or look in another console.

@@ -1,3 +1,35 @@
-= Section 2
+= Lab - Build Example (Fixable Severity At least Important)
 
-This is _Section 2_ of _Chapter 1_ in the *hello* quick course....
+##FIX_MISSING_IMAGES##
+
+1. Navigate to Platform Configuration -> Policy Management
+
+2. Find "Fixable Severity at Least Important" in the list
+
+3. Actions -> "Edit Policy"
+
+4. Review and verify Name, Categories, Description, Rationale, Guidance. Click Next.
+
+5. Review and verify Lifecycle Stages, Response Method, Enforcement Behavior. Ensure that build enforcement is enabled.
+
+6. Click Next to review and describe Policy Criteria. No changes.
+
+7. Click Next to review and describe Policy Scope. No changes.
+
+8. Click Next to final review and Preview. Click Save.
+
+9. Use ACS command-line tool, roxctl:
++
+[subs=+quotes]
+----
+roxctl image check -e $CENTRAL:443 --image quay.io/rhacs-misc/log4shell:1.1
+----
+
+10. Review policy output warnings and errors
+
+11. Verify build failure via roxctl return code:
++
+[subs=+quotes]
+----
+echo $?
+----
